@@ -10,13 +10,20 @@ body{
     font-weight: bold;
 } */
  img{
-    height: 500px;
-    width: 500px;
-    border-radius: 500px;
-} 
-video{
-    height: 400px;
+    height:500px;
     width:500px;
+} 
+
+@media (max-width:600px){
+    img{
+        height:auto;
+        width:100%;
+        
+    }
+
+}
+video{
+    width:100%;
 }
 ol{
     list-style-type:lower-latin;
@@ -45,8 +52,16 @@ button{
 }
 nav{
     display: flex;
-    flex-direction: row;
-    gap:100px;
+    flex-direction: column;
+    /*gap:100px;*/
+}
+
+@media(min-width:1024px){
+    nav{
+        display: flex;
+        flex-direction:row;
+        gap:100px;
+    }
 }
 #p1{
     font-style:normal;
@@ -61,7 +76,12 @@ nav{
 }
 .grid{
     display:grid;
-    grid-template-columns: 33% 33% 33%;
+}
+@media(min-width:1024px){
+    .grid{
+        display:grid;
+        grid-template-columns: 33% 33% 33%;
+    }
 }
 .beauty{
     display:grid;
